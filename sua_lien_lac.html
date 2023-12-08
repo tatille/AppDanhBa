@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Liên Lạc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<div class="app">
+
+    <body>
+        <h1>Sửa Liên Lạc</h1>
+
+        <!-- Biểu mẫu sửa liên lạc -->
+        <form action="{{ url_for('sua_lien_lac', ten_cu=lien_lac.ten) }}" method="post">
+            <label for="ten">Tên:</label>
+            <input type="text" id="ten" name="ten" value="{{ lien_lac.ten }}" required>
+            <label for="sdt">Số Điện Thoại:</label>
+            <input type="text" id="sdt" name="sdt" value="{{ lien_lac.sdt }}" required>
+            <button type="submit">Lưu</button>
+        </form>
+    </body>
+</div>
+
+</html>
